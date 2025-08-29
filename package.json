@@ -1,0 +1,44 @@
+{
+  "name": "codesign",
+  "version": "1.0.0",
+  "description": "Open-source, AI-powered collaborative design platform - an alternative to Figma built with MERN stack",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "server:dev": "nodemon server/index.js",
+    "client:dev": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "design",
+    "collaboration",
+    "figma-alternative",
+    "open-source",
+    "mern-stack",
+    "ai-powered",
+    "real-time",
+    "vector-graphics"
+  ],
+  "author": "CoDesign Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amansoomro062/codesign.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amansoomro062/codesign/issues"
+  },
+  "homepage": "https://github.com/amansoomro062/codesign#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2",
+    "eslint": "^8.56.0",
+    "prettier": "^3.1.1",
+    "jest": "^29.7.0"
+  }
+}
