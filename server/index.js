@@ -7,7 +7,7 @@ const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const { createServer } = require('http');
 const { Server } = require('socket.io');
-require('dotenv').config();
+require('dotenv').config({ path: __dirname + '/.env' });
 
 const app = express();
 const server = createServer(app);
@@ -110,6 +110,12 @@ app.use((err, req, res, next) => {
 app.use('*', (req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
+
+// Debug environment variables
+console.log('🔍 Environment variables:');
+console.log('PORT:', process.env.PORT);
+console.log('MONGODB_URI:', process.env.MONGODB_URI);
+console.log('CLIENT_URL:', process.env.CLIENT_URL);
 
 const PORT = process.env.PORT || 5000;
 
