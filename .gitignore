@@ -63,5 +63,8 @@ Thumbs.db
 *.swo
 *~
 
+# Cursor rules
+.cursorrules
+
 # Uploads
 uploads/
