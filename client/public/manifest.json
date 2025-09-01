@@ -1,0 +1,22 @@
+{
+  "name": "CoDesign - Open Source AI-Powered Design Platform",
+  "short_name": "CoDesign",
+  "description": "The world's first open-source AI-powered design platform with real-time collaboration.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f23",
+  "theme_color": "#8b5cf6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}
