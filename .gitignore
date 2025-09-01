@@ -68,3 +68,6 @@ Thumbs.db
 
 # Uploads
 uploads/
+
+# Reference files
+.reference-files/
