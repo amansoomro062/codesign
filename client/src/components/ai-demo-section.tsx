@@ -9,10 +9,20 @@ export function AIDemoSection() {
   return (
     <section id="ai-demo" className="relative py-24 bg-gradient-to-br from-slate-900 via-green-900/15 to-slate-900">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
       
       {/* Animated background dots */}
-      <div className="absolute inset-0 opacity-15">
+      <motion.div 
+        className="absolute inset-0 opacity-15 pointer-events-none"
+        animate={{
+          opacity: [0.15, 0.25, 0.15],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
         <div
           className="absolute inset-0"
           style={{
@@ -20,7 +30,7 @@ export function AIDemoSection() {
             backgroundSize: "75px 75px",
           }}
         />
-      </div>
+      </motion.div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -94,11 +104,11 @@ export function AIDemoSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-0">
-                <div className="bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 p-8 relative">
+                <div className="bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 backdrop-blur-sm p-8 relative">
                   {/* Mock AI Interface */}
-                  <div className="bg-background rounded-lg p-6 shadow-lg">
+                  <div className="bg-slate-900/80 backdrop-blur-md rounded-lg p-6 shadow-2xl border border-white/10">
                     <div className="flex items-center space-x-2 mb-4">
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                       <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>

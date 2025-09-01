@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Github, MessageCircle, Heart, Users, GitFork, Star } from "lucide-react"
+import { DiscordIcon } from "@/components/ui/discord-icon"
 import { motion } from "framer-motion"
 import { fetchGitHubStats, formatStat, type GitHubStats } from "@/lib/github-stats"
 
@@ -41,10 +42,20 @@ export function CommunitySection() {
   return (
     <section id="community" className="relative py-24 bg-gradient-to-br from-slate-950 via-purple-950/25 to-slate-950">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/10 to-transparent pointer-events-none" />
       
       {/* Animated background dots */}
-      <div className="absolute inset-0 opacity-10">
+      <motion.div 
+        className="absolute inset-0 opacity-10 pointer-events-none"
+        animate={{
+          opacity: [0.1, 0.18, 0.1],
+        }}
+        transition={{
+          duration: 4.5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
         <div
           className="absolute inset-0"
           style={{
@@ -52,7 +63,7 @@ export function CommunitySection() {
             backgroundSize: "85px 85px",
           }}
         />
-      </div>
+      </motion.div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -81,7 +92,7 @@ export function CommunitySection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="text-center hover:shadow-lg transition-shadow duration-300">
+              <Card className="text-center bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-6">
                   <div className={`inline-flex p-3 rounded-lg bg-primary/10 mb-4 ${stat.color}`}>
                     <stat.icon className="w-6 h-6" />
@@ -102,7 +113,7 @@ export function CommunitySection() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <Card className="bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 border-purple-500/20 hover:shadow-xl transition-all duration-300">
+          <Card className="bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 backdrop-blur-md border border-purple-500/20 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
             <CardContent className="p-8 text-center">
               <div className="inline-flex p-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-6">
                 <Heart className="w-8 h-8 text-white" />
@@ -137,15 +148,21 @@ export function CommunitySection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="bg-card rounded-2xl p-8 md:p-12 text-center"
         >
-          <h3 className="text-2xl font-bold text-foreground mb-4">Ready to Contribute?</h3>
-          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Whether you're a designer, developer, or just passionate about open source, there's a place for you in our
-            community.
-          </p>
+          <Card className="bg-gradient-to-r from-blue-500/10 via-green-500/10 to-purple-500/10 backdrop-blur-md border border-blue-500/20 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
+            <CardContent className="p-8 md:p-12 text-center">
+              <div className="inline-flex p-4 rounded-full bg-gradient-to-r from-blue-600 to-green-500 mb-6">
+                <Github className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Ready to Contribute?
+              </h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                Whether you're a designer, developer, or just passionate about open source, there's a place for you in our
+                community. Join us in building the future of design tools.
+              </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" asChild className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 group cursor-pointer">
               <a href="https://github.com/amansoomro062/codesign" target="_blank" rel="noopener noreferrer">
                 <Github className="w-5 h-5 mr-2" />
@@ -153,10 +170,12 @@ export function CommunitySection() {
               </a>
             </Button>
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 group cursor-pointer">
-              <MessageCircle className="w-5 h-5 mr-2" />
+              <DiscordIcon className="w-5 h-5 mr-2" />
               Join Discord
             </Button>
-          </div>
+              </div>
+            </CardContent>
+          </Card>
         </motion.div>
       </div>
     </section>

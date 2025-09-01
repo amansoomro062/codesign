@@ -46,10 +46,20 @@ export function FeaturesSection() {
   return (
     <section id="features" className="relative py-32 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 overflow-hidden">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
       
       {/* Animated background dots */}
-      <div className="absolute inset-0 opacity-10">
+      <motion.div 
+        className="absolute inset-0 opacity-10 pointer-events-none"
+        animate={{
+          opacity: [0.1, 0.15, 0.1],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
         <div
           className="absolute inset-0"
           style={{
@@ -57,7 +67,7 @@ export function FeaturesSection() {
             backgroundSize: "80px 80px",
           }}
         />
-      </div>
+      </motion.div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
@@ -88,7 +98,7 @@ export function FeaturesSection() {
             viewport={{ once: true }}
             className="lg:col-span-2 lg:row-span-1"
           >
-            <Card className="h-full glass hover:scale-[1.02] transition-all duration-500 border-border/50">
+            <Card className="h-full bg-white/5 backdrop-blur-md hover:bg-white/10 hover:scale-[1.02] transition-all duration-500 border border-white/10">
               <CardContent className="p-10 h-full flex flex-col justify-between">
                 <div>
                   <div className={`p-4 rounded-2xl bg-primary/10 ${features[0].color} w-fit mb-6`}>
@@ -110,7 +120,7 @@ export function FeaturesSection() {
             className="lg:col-span-1 lg:row-span-2"
           >
             <Card
-              className={`h-full glass hover:scale-[1.02] transition-all duration-500 border-border/50 ${features[1].highlight ? "ring-2 ring-accent/50 bg-accent/5" : ""}`}
+              className={`h-full bg-white/5 backdrop-blur-md hover:bg-white/10 hover:scale-[1.02] transition-all duration-500 border border-white/10 ${features[1].highlight ? "ring-2 ring-accent/50 bg-gradient-to-br from-accent/10 to-purple-500/10" : ""}`}
             >
               <CardContent className="p-10 h-full flex flex-col justify-between">
                 <div>
@@ -141,7 +151,7 @@ export function FeaturesSection() {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <Card className="h-full glass hover:scale-[1.02] transition-all duration-500 border-border/50">
+            <Card className="h-full bg-white/5 backdrop-blur-md hover:bg-white/10 hover:scale-[1.02] transition-all duration-500 border border-white/10">
               <CardContent className="p-8 h-full flex flex-col justify-between">
                 <div>
                   <div className={`p-3 rounded-xl bg-secondary/10 ${features[2].color} w-fit mb-4`}>
@@ -162,7 +172,7 @@ export function FeaturesSection() {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <Card className="h-full glass hover:scale-[1.02] transition-all duration-500 border-border/50">
+            <Card className="h-full bg-white/5 backdrop-blur-md hover:bg-white/10 hover:scale-[1.02] transition-all duration-500 border border-white/10">
               <CardContent className="p-8 h-full flex flex-col justify-between">
                 <div>
                   <div className={`p-3 rounded-xl bg-primary/10 ${features[3].color} w-fit mb-4`}>

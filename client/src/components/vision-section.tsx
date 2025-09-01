@@ -29,10 +29,20 @@ export function VisionSection() {
   return (
     <section id="vision" className="relative py-24 bg-gradient-to-br from-slate-950 via-indigo-950/30 to-slate-950">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent pointer-events-none" />
       
       {/* Animated background dots */}
-      <div className="absolute inset-0 opacity-15">
+      <motion.div 
+        className="absolute inset-0 opacity-15 pointer-events-none"
+        animate={{
+          opacity: [0.15, 0.2, 0.15],
+        }}
+        transition={{
+          duration: 5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
         <div
           className="absolute inset-0"
           style={{
@@ -40,7 +50,7 @@ export function VisionSection() {
             backgroundSize: "70px 70px",
           }}
         />
-      </div>
+      </motion.div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -67,7 +77,7 @@ export function VisionSection() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full text-center hover:shadow-lg transition-shadow duration-300">
+              <Card className="h-full text-center bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:shadow-2xl transition-all duration-300">
                 <CardContent className="p-8">
                   <div className="inline-flex p-4 rounded-full bg-primary/10 text-primary mb-6">
                     <point.icon className="w-8 h-8" />
@@ -85,7 +95,7 @@ export function VisionSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 rounded-2xl p-8 md:p-12 text-center"
+          className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 text-center hover:shadow-2xl transition-all duration-300"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-balance">
             "Design tools should empower creators, not limit them."
