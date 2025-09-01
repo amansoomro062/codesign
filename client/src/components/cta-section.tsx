@@ -118,7 +118,7 @@ export function CTASection() {
           >
             <h3 className="text-2xl font-bold text-foreground mb-4">Start Contributing Today</h3>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Whether you're fixing a typo in documentation or building a major feature, every contribution matters.
+              Whether you&apos;re fixing a typo in documentation or building a major feature, every contribution matters.
               Check out our contributor guide to get started.
             </p>
 

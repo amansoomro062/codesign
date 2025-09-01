@@ -64,7 +64,7 @@ export function AIDemoSection() {
                 <h3 className="text-xl font-semibold text-foreground">Smart Design Suggestions</h3>
               </div>
               <p className="text-muted-foreground pl-10">
-                Get contextual design recommendations based on your project's style and best practices.
+                Get contextual design recommendations based on your project&apos;s style and best practices.
               </p>
             </div>
 
@@ -124,7 +124,7 @@ export function AIDemoSection() {
                         <div className="flex-1">
                           <div className="bg-muted rounded-lg p-3">
                             <p className="text-sm text-foreground">
-                              I've analyzed your design and suggest using a more consistent spacing pattern. Would you
+                              I&apos;ve analyzed your design and suggest using a more consistent spacing pattern. Would you
                               like me to apply a 8px grid system?
                             </p>
                           </div>
@@ -138,7 +138,7 @@ export function AIDemoSection() {
                         <div className="flex-1">
                           <div className="bg-muted rounded-lg p-3">
                             <p className="text-sm text-foreground">
-                              Your button component is ready! I've generated React code with proper accessibility
+                              Your button component is ready! I&apos;ve generated React code with proper accessibility
                               attributes and responsive design.
                             </p>
                           </div>

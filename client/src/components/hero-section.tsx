@@ -322,7 +322,7 @@ export function HeroSection() {
               transition={{ duration: 1, delay: 0.7 }}
               className="text-xl sm:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed text-pretty font-light"
             >
-              The world's first open-source AI-powered design platform. Real-time collaboration meets intelligent
+              The world&apos;s first open-source AI-powered design platform. Real-time collaboration meets intelligent
               assistance in a tool built by the community, for the community.
             </motion.p>
           </div>

@@ -1,6 +1,6 @@
 "use client"
 
-import { Github, MessageCircle, Twitter, Heart, Palette, Users, Star, Code, BookOpen, Shield, Zap, ExternalLink } from "lucide-react"
+import { Github, Twitter, Heart, Palette, Users, Star, BookOpen, Zap, ExternalLink } from "lucide-react"
 import { DiscordIcon } from "@/components/ui/discord-icon"
 
 
@@ -55,7 +55,7 @@ export function Footer() {
             </div>
             
             <p className="text-slate-300 leading-relaxed max-w-md">
-              The world's first open-source AI-powered design platform. Real-time collaboration meets intelligent assistance in a tool built by the community, for the community.
+              The world&apos;s first open-source AI-powered design platform. Real-time collaboration meets intelligent assistance in a tool built by the community, for the community.
             </p>
 
             {/* Social links */}

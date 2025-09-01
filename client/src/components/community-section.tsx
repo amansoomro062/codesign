@@ -158,7 +158,7 @@ export function CommunitySection() {
                 Ready to Contribute?
               </h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Whether you're a designer, developer, or just passionate about open source, there's a place for you in our
+                Whether you&apos;re a designer, developer, or just passionate about open source, there&apos;s a place for you in our
                 community. Join us in building the future of design tools.
               </p>
 

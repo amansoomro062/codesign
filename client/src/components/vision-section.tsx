@@ -64,7 +64,7 @@ export function VisionSection() {
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed text-pretty">
             We believe that the future of design tools lies in open collaboration, transparency, and community-driven
-            innovation. Here's why we're committed to the open source way.
+            innovation. Here&apos;s why we&apos;re committed to the open source way.
           </p>
         </motion.div>
 
@@ -98,11 +98,11 @@ export function VisionSection() {
           className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 text-center hover:shadow-2xl transition-all duration-300"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-balance">
-            "Design tools should empower creators, not limit them."
+            &ldquo;Design tools should empower creators, not limit them.&rdquo;
           </h3>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
             By keeping CoDesign open source, we ensure that the tools designers and developers rely on remain in the
-            hands of the community that uses them. Together, we're building something bigger than any single company
+            hands of the community that uses them. Together, we&apos;re building something bigger than any single company
             could create alone.
           </p>
         </motion.div>
