@@ -6,8 +6,18 @@ import { motion } from "framer-motion"
 
 export function CTASection() {
   return (
-    <section className="py-24 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-24 bg-gradient-to-br from-slate-900 via-pink-900/20 to-slate-900">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+      <div className="absolute inset-0 opacity-15">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(236,72,153,0.4) 1px, transparent 0)`,
+            backgroundSize: "65px 65px",
+          }}
+        />
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +103,7 @@ export function CTASection() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
-            className="bg-card rounded-2xl p-8 md:p-12 border border-border/50"
+            className="bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-blue-500/10 rounded-2xl p-8 md:p-12 border border-pink-500/20 hover:shadow-xl transition-all duration-300"
           >
             <h3 className="text-2xl font-bold text-foreground mb-4">Start Contributing Today</h3>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">

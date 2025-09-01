@@ -44,8 +44,20 @@ export function FeaturesSection() {
   const IconComponent3 = features[3].icon
 
   return (
-    <section id="features" className="py-32 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent" />
+    <section id="features" className="relative py-32 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 overflow-hidden">
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+      
+      {/* Animated background dots */}
+      <div className="absolute inset-0 opacity-10">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, rgba(168,85,247,0.3) 1px, transparent 0)`,
+            backgroundSize: "80px 80px",
+          }}
+        />
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div

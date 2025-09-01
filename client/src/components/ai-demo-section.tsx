@@ -7,7 +7,20 @@ import { motion } from "framer-motion"
 
 export function AIDemoSection() {
   return (
-    <section id="ai-demo" className="py-24 bg-muted/30">
+    <section id="ai-demo" className="relative py-24 bg-gradient-to-br from-slate-900 via-green-900/15 to-slate-900">
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+      
+      {/* Animated background dots */}
+      <div className="absolute inset-0 opacity-15">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(34,197,94,0.4) 1px, transparent 0)`,
+            backgroundSize: "75px 75px",
+          }}
+        />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

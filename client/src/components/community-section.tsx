@@ -39,7 +39,20 @@ export function CommunitySection() {
   ]
 
   return (
-    <section id="community" className="py-24 bg-background">
+    <section id="community" className="relative py-24 bg-gradient-to-br from-slate-950 via-purple-950/25 to-slate-950">
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-purple-900/10 to-transparent" />
+      
+      {/* Animated background dots */}
+      <div className="absolute inset-0 opacity-10">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(168,85,247,0.3) 1px, transparent 0)`,
+            backgroundSize: "85px 85px",
+          }}
+        />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
