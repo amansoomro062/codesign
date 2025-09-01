@@ -133,9 +133,11 @@ export function CommunitySection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 group cursor-pointer">
-              <Github className="w-5 h-5 mr-2" />
-              View on GitHub
+            <Button size="lg" asChild className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 group cursor-pointer">
+              <a href="https://github.com/amansoomro062/codesign" target="_blank" rel="noopener noreferrer">
+                <Github className="w-5 h-5 mr-2" />
+                View on GitHub
+              </a>
             </Button>
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 group cursor-pointer">
               <MessageCircle className="w-5 h-5 mr-2" />

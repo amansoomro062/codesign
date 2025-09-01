@@ -132,10 +132,12 @@ export function HeroSection() {
             transition={{ duration: 1, delay: 0.9 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
-            <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white group font-semibold border-0 cursor-pointer">
-              <Github className="w-5 h-5 mr-3" />
-              Star on GitHub
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" asChild className="text-lg px-10 py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white group font-semibold border-0 cursor-pointer">
+              <a href="https://github.com/amansoomro062/codesign" target="_blank" rel="noopener noreferrer">
+                <Github className="w-5 h-5 mr-3" />
+                Star on GitHub
+                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
 
             <Button

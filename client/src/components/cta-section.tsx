@@ -36,10 +36,12 @@ export function CTASection() {
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Contribute Code</h3>
               <p className="text-muted-foreground mb-4">Help us build features, fix bugs, and improve the codebase.</p>
-              <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 group cursor-pointer">
-                <Github className="w-4 h-4 mr-2" />
-                View Repository
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <Button asChild className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 group cursor-pointer">
+                <a href="https://github.com/amansoomro062/codesign" target="_blank" rel="noopener noreferrer">
+                  <Github className="w-4 h-4 mr-2" />
+                  View Repository
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
             </motion.div>
 
@@ -76,10 +78,12 @@ export function CTASection() {
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">Star & Share</h3>
               <p className="text-muted-foreground mb-4">Help us grow by starring the repo and sharing with others.</p>
-              <Button className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white border-0 group cursor-pointer">
-                <Star className="w-4 h-4 mr-2" />
-                Star on GitHub
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <Button asChild className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white border-0 group cursor-pointer">
+                <a href="https://github.com/amansoomro062/codesign" target="_blank" rel="noopener noreferrer">
+                  <Star className="w-4 h-4 mr-2" />
+                  Star on GitHub
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
             </motion.div>
           </div>
@@ -98,10 +102,12 @@ export function CTASection() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 text-lg px-8 py-6 group cursor-pointer">
-                <Github className="w-5 h-5 mr-2" />
-                Get Started
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <Button size="lg" asChild className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 text-lg px-8 py-6 group cursor-pointer">
+                <a href="https://github.com/amansoomro062/codesign" target="_blank" rel="noopener noreferrer">
+                  <Github className="w-5 h-5 mr-2" />
+                  Get Started
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 text-lg px-8 py-6 cursor-pointer">
                 Read Docs
