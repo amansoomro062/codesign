@@ -1,103 +1,213 @@
-import { Github, MessageCircle, Twitter, Heart, Palette, Users } from "lucide-react"
+"use client"
+
+import { Github, MessageCircle, Twitter, Heart, Palette, Users, Star, Code, BookOpen, Shield, Zap, ExternalLink } from "lucide-react"
+
+// Custom Discord icon since it's not in lucide-react
+const DiscordIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
+  </svg>
+)
 
 export function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id)
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
-    <footer className="bg-background border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="space-y-4">
-            <div className="flex items-center space-x-3">
+    <footer className="relative bg-gradient-to-br from-slate-950 via-purple-950/20 to-slate-950 border-t border-purple-500/20">
+      {/* Background gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+      
+      {/* Animated background dots */}
+      <div className="absolute inset-0 opacity-20">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(168,85,247,0.4) 1px, transparent 0)`,
+            backgroundSize: "60px 60px",
+          }}
+        />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Main footer content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+          {/* Brand section */}
+          <div className="lg:col-span-2 space-y-6">
+            <div className="flex items-center space-x-4">
               <div className="relative">
-                <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center shadow-lg border border-white/10">
-                  <Palette className="w-4 h-4 text-white drop-shadow-sm" />
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-xl border border-white/20 backdrop-blur-sm">
+                  <Palette className="w-6 h-6 text-white drop-shadow-lg" />
                 </div>
-                <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-md border border-white/20">
-                  <Users className="w-2 h-2 text-white drop-shadow-sm" />
+                <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center shadow-lg border-2 border-white/30">
+                  <Users className="w-3 h-3 text-white drop-shadow-sm" />
                 </div>
               </div>
-              <span className="text-xl font-bold text-white">
-                Co<span className="bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent">Design</span>
-              </span>
+              <div>
+                <span className="text-2xl font-black text-white">
+                  Co<span className="bg-gradient-to-r from-pink-400 to-blue-400 bg-clip-text text-transparent">Design</span>
+                </span>
+                <p className="text-purple-300 text-sm font-medium">Open Source Design Platform</p>
+              </div>
             </div>
-            <p className="text-muted-foreground">
-              Open source design collaboration platform built by the community, for the community.
+            
+            <p className="text-slate-300 leading-relaxed max-w-md">
+              The world's first open-source AI-powered design platform. Real-time collaboration meets intelligent assistance in a tool built by the community, for the community.
             </p>
-          </div>
 
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Product</h3>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>
-                <a href="#features" className="hover:text-foreground transition-colors">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#ai-demo" className="hover:text-foreground transition-colors">
-                  AI Demo
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  API Reference
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Community</h3>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Discord
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Contributors
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-foreground transition-colors">
-                  Code of Conduct
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Connect</h3>
+            {/* Social links */}
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-purple-500 transition-colors">
-                <Github className="w-5 h-5" />
+              <a 
+                href="https://github.com/amansoomro062/codesign" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-purple-500/20 backdrop-blur-sm rounded-xl border border-white/10 hover:border-purple-400/30 text-slate-300 hover:text-purple-300 transition-all duration-300 group"
+              >
+                <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-purple-500 transition-colors">
-                <MessageCircle className="w-5 h-5" />
+              <a 
+                href="#" 
+                className="flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-indigo-500/20 backdrop-blur-sm rounded-xl border border-white/10 hover:border-indigo-400/30 text-slate-300 hover:text-indigo-300 transition-all duration-300 group"
+              >
+                <DiscordIcon />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-purple-500 transition-colors">
-                <Twitter className="w-5 h-5" />
+              <a 
+                href="#" 
+                className="flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-sky-500/20 backdrop-blur-sm rounded-xl border border-white/10 hover:border-sky-400/30 text-slate-300 hover:text-sky-300 transition-all duration-300 group"
+              >
+                <Twitter className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
             </div>
+          </div>
+
+          {/* Product links */}
+          <div>
+            <h3 className="font-bold text-white mb-6 flex items-center">
+              <Zap className="w-4 h-4 mr-2 text-purple-400" />
+              Product
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <button onClick={() => scrollToSection('features')} className="text-slate-400 hover:text-white transition-colors flex items-center group">
+                  Features
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </button>
+              </li>
+              <li>
+                <button onClick={() => scrollToSection('ai-demo')} className="text-slate-400 hover:text-white transition-colors flex items-center group">
+                  AI Demo
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </button>
+              </li>
+              <li>
+                <a href="#" className="text-slate-400 hover:text-white transition-colors flex items-center group">
+                  Documentation
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-slate-400 hover:text-white transition-colors flex items-center group">
+                  API Reference
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Community links */}
+          <div>
+            <h3 className="font-bold text-white mb-6 flex items-center">
+              <Users className="w-4 h-4 mr-2 text-pink-400" />
+              Community
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="https://github.com/amansoomro062/codesign" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors flex items-center group">
+                  GitHub Repository
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-slate-400 hover:text-white transition-colors flex items-center group">
+                  Discord Community
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/amansoomro062/codesign/graphs/contributors" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors flex items-center group">
+                  Contributors
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/amansoomro062/codesign/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors flex items-center group">
+                  Code of Conduct
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h3 className="font-bold text-white mb-6 flex items-center">
+              <BookOpen className="w-4 h-4 mr-2 text-blue-400" />
+              Resources
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <a href="https://github.com/amansoomro062/codesign/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors flex items-center group">
+                  Contributing Guide
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/amansoomro062/codesign/blob/main/README.md" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors flex items-center group">
+                  Getting Started
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/amansoomro062/codesign/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors flex items-center group">
+                  MIT License
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/amansoomro062/codesign/releases" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors flex items-center group">
+                  Releases
+                  <ExternalLink className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="border-t border-border mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">© 2025 CoDesign. Open source under MIT License.</p>
-          <div className="flex items-center space-x-1 text-muted-foreground text-sm mt-4 sm:mt-0">
-            <span>Made with</span>
-            <Heart className="w-4 h-4 text-purple-500" />
-            <span>by the community</span>
+        {/* Bottom section */}
+        <div className="border-t border-purple-500/20 mt-16 pt-8 flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
+          <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 text-slate-400 text-sm">
+            <p>© 2025 CoDesign. Open source under MIT License.</p>
+            <div className="flex items-center space-x-4">
+              <a href="https://github.com/amansoomro062/codesign/blob/main/PRIVACY.md" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Privacy</a>
+              <a href="https://github.com/amansoomro062/codesign/blob/main/TERMS.md" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Terms</a>
+            </div>
+          </div>
+          
+          <div className="flex items-center space-x-2 text-slate-400 text-sm group cursor-pointer" onClick={scrollToTop}>
+            <span className="group-hover:text-purple-300 transition-colors">Made with</span>
+            <Heart className="w-4 h-4 text-purple-500 group-hover:text-pink-400 transition-colors animate-pulse" />
+            <span className="group-hover:text-purple-300 transition-colors">by the community</span>
+            <div className="ml-2 p-1 rounded-full bg-purple-500/20 group-hover:bg-purple-500/30 transition-colors">
+              <Star className="w-3 h-3 text-purple-400 group-hover:text-purple-300 transition-colors" />
+            </div>
           </div>
         </div>
       </div>

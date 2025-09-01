@@ -44,43 +44,244 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none w-full h-full">
+        {/* Sarah - Cursor movement without rectangle drawing */}
         <motion.div
-          className="absolute top-1/3 left-1/4 cursor-animate"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
+          className="absolute"
+          initial={{ x: 400, y: 180, opacity: 0 }}
+          animate={{
+            x: [400, 480, 520, 540, 500, 450, 400],
+            y: [180, 160, 170, 200, 220, 200, 180],
+            opacity: [0, 1, 1, 1, 1, 1, 1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            repeatDelay: 2,
+            ease: "linear",
+            delay: 1,
+          }}
         >
           <MousePointer2 className="w-6 h-6 text-white drop-shadow-lg" />
-          <div className="absolute -top-8 -left-2 bg-white/90 text-black text-xs px-2 py-1 rounded shadow-lg">
+          <div className="absolute -top-8 -left-2 bg-white/90 text-black text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">
             Sarah
           </div>
+          <motion.div
+            className="absolute top-3 left-3 w-4 h-4 border-2 border-white/80 rounded-full"
+            animate={{
+              scale: [0, 1.5, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 0.4,
+              times: [0, 0.3, 1],
+              repeat: Infinity,
+              repeatDelay: 7.6,
+              delay: 1.2,
+            }}
+          />
         </motion.div>
 
+        {/* Alex - Complex design workflow with enhanced click and drag effects */}
         <motion.div
-          className="absolute top-1/2 right-1/3 cursor-animate"
-          style={{ animationDelay: "1s" }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.5, duration: 1 }}
+          className="absolute"
+          initial={{ x: 900, y: 180, opacity: 0 }}
+          animate={{
+            x: [900, 1000, 1150, 1200, 1050, 950, 900],
+            y: [180, 160, 200, 280, 320, 250, 180],
+            opacity: [0, 1, 1, 1, 1, 1, 1],
+            rotate: [0, -5, 0, 5, 0, -3, 0],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            repeatDelay: 1,
+            ease: "easeInOut",
+            delay: 2,
+          }}
         >
           <MousePointer2 className="w-6 h-6 text-accent drop-shadow-lg" />
-          <div className="absolute -top-8 -left-2 bg-accent/90 text-black text-xs px-2 py-1 rounded shadow-lg">
+          <div className="absolute -top-8 -left-2 bg-accent/90 text-black text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">
             Alex
           </div>
+          <motion.div
+            className="absolute top-3 left-3 w-6 h-6 border-2 border-accent/80 rounded-full"
+            animate={{
+              scale: [0, 2, 0],
+              opacity: [0, 0.8, 0],
+            }}
+            transition={{
+              duration: 0.6,
+              times: [0, 0.4, 1],
+              repeat: Infinity,
+              repeatDelay: 11.4,
+              delay: 2.5,
+            }}
+          />
+          <motion.div
+            className="absolute top-2 left-2 w-8 h-6 border-2 border-accent/60 rounded bg-accent/20"
+            animate={{
+              scale: [0, 1, 1, 0],
+              opacity: [0, 0.8, 0.8, 0],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              repeatDelay: 8,
+              delay: 4,
+            }}
+          />
+          <motion.div
+            className="absolute top-4 left-4 w-1 h-1 bg-accent/60 rounded-full"
+            animate={{
+              scale: [0, 1, 1, 0],
+              opacity: [0, 1, 1, 0],
+            }}
+            transition={{
+              duration: 0.3,
+              repeat: Infinity,
+              repeatDelay: 0.2,
+              delay: 4,
+            }}
+          />
         </motion.div>
 
+        {/* Maya - Dragging animation */}
         <motion.div
-          className="absolute bottom-1/3 left-1/3 cursor-animate"
-          style={{ animationDelay: "2s" }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 3, duration: 1 }}
+          className="absolute"
+          initial={{ x: 350, y: 380, opacity: 0 }}
+          animate={{
+            x: [350, 420, 480, 520, 460, 400, 350],
+            y: [380, 360, 370, 400, 420, 410, 380],
+            opacity: [0, 1, 1, 1, 1, 1, 1],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            repeatDelay: 3,
+            ease: "easeInOut",
+            delay: 3,
+          }}
         >
           <MousePointer2 className="w-6 h-6 text-purple-500 drop-shadow-lg" />
-          <div className="absolute -top-8 -left-2 bg-purple-500/90 text-white text-xs px-2 py-1 rounded shadow-lg">
+          <div className="absolute -top-8 -left-2 bg-purple-500/90 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">
             Maya
           </div>
+          {/* Drag trail effect */}
+          <motion.div
+            className="absolute top-3 left-3 w-3 h-3 border border-purple-500/80 rounded-full"
+            animate={{
+              scale: [0, 1.8, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 0.3,
+              repeat: Infinity,
+              repeatDelay: 5.7,
+              delay: 3.5,
+            }}
+          />
+          {/* Drag indicator dots */}
+          <motion.div
+            className="absolute top-2 left-2 w-8 h-4 border border-purple-500/60 rounded bg-purple-500/20"
+            animate={{
+              opacity: [0, 0.8, 0.8, 0],
+              scaleX: [0, 1, 1, 0],
+            }}
+            transition={{
+              duration: 3,
+              repeat: Infinity,
+              repeatDelay: 3,
+              delay: 4,
+            }}
+          />
+          {/* Drag indicator dots */}
+          <motion.div
+            className="absolute top-4 left-4 w-1 h-1 bg-purple-500 rounded-full"
+            animate={{
+              scale: [0, 1, 1, 0],
+              opacity: [0, 1, 1, 0],
+            }}
+            transition={{
+              duration: 0.4,
+              repeat: Infinity,
+              repeatDelay: 0.3,
+              delay: 4.2,
+            }}
+          />
+        </motion.div>
+
+        {/* Additional cursor - Design element creation with enhanced effects */}
+        <motion.div
+          className="absolute"
+          initial={{ x: 800, y: 380, opacity: 0 }}
+          animate={{
+            x: [800, 950, 1100, 1180, 1050, 900, 800],
+            y: [380, 360, 400, 450, 480, 440, 380],
+            opacity: [0, 1, 1, 1, 1, 1, 0],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            repeatDelay: 4,
+            ease: "easeInOut",
+            delay: 5,
+          }}
+        >
+          <MousePointer2 className="w-5 h-5 text-white/80 drop-shadow-lg" />
+          <div className="absolute -top-7 -left-2 bg-white/80 text-black text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">Dev</div>
+          <motion.div
+            className="absolute top-2 left-2 w-5 h-5 border-2 border-white/60 rounded-full"
+            animate={{
+              scale: [0, 2.5, 0],
+              opacity: [0, 0.7, 0],
+            }}
+            transition={{
+              duration: 0.8,
+              repeat: Infinity,
+              repeatDelay: 9.2,
+              delay: 6,
+            }}
+          />
+          <motion.div
+            className="absolute top-1 left-1 w-2 h-2 bg-white rounded-full"
+            animate={{
+              scale: [0, 1.5, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 0.8,
+              repeat: Infinity,
+              repeatDelay: 2,
+              delay: 7,
+            }}
+          />
+          <motion.div
+            className="absolute top-3 left-0 w-1 h-1 bg-white/80 rounded-full"
+            animate={{
+              scale: [0, 1, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 0.5,
+              repeat: Infinity,
+              repeatDelay: 2.5,
+              delay: 7.3,
+            }}
+          />
+          <motion.div
+            className="absolute top-0 left-3 w-1 h-1 bg-white/60 rounded-full"
+            animate={{
+              scale: [0, 1, 0],
+              opacity: [0, 1, 0],
+            }}
+            transition={{
+              duration: 0.4,
+              repeat: Infinity,
+              repeatDelay: 2.6,
+              delay: 7.6,
+            }}
+          />
         </motion.div>
       </div>
 
