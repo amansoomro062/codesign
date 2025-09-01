@@ -62,12 +62,12 @@ export function HeroSection() {
             delay: 1,
           }}
         >
-          <MousePointer2 className="w-6 h-6 text-white drop-shadow-lg" />
-          <div className="absolute -top-8 -left-2 bg-white/90 text-black text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">
+          <MousePointer2 className="w-6 h-6 text-purple-400 drop-shadow-lg" />
+          <div className="absolute -top-8 -left-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">
             Sarah
           </div>
           <motion.div
-            className="absolute top-3 left-3 w-4 h-4 border-2 border-white/80 rounded-full"
+            className="absolute top-3 left-3 w-4 h-4 border-2 border-purple-400/80 rounded-full"
             animate={{
               scale: [0, 1.5, 0],
               opacity: [0, 1, 0],
@@ -100,12 +100,12 @@ export function HeroSection() {
             delay: 2,
           }}
         >
-          <MousePointer2 className="w-6 h-6 text-accent drop-shadow-lg" />
-          <div className="absolute -top-8 -left-2 bg-accent/90 text-black text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">
+          <MousePointer2 className="w-6 h-6 text-blue-400 drop-shadow-lg" />
+          <div className="absolute -top-8 -left-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">
             Alex
           </div>
           <motion.div
-            className="absolute top-3 left-3 w-6 h-6 border-2 border-accent/80 rounded-full"
+            className="absolute top-3 left-3 w-6 h-6 border-2 border-blue-400/80 rounded-full"
             animate={{
               scale: [0, 2, 0],
               opacity: [0, 0.8, 0],
@@ -119,7 +119,7 @@ export function HeroSection() {
             }}
           />
           <motion.div
-            className="absolute top-2 left-2 w-8 h-6 border-2 border-accent/60 rounded bg-accent/20"
+            className="absolute top-2 left-2 w-8 h-6 border-2 border-blue-400/60 rounded bg-blue-400/20"
             animate={{
               scale: [0, 1, 1, 0],
               opacity: [0, 0.8, 0.8, 0],
@@ -132,7 +132,7 @@ export function HeroSection() {
             }}
           />
           <motion.div
-            className="absolute top-4 left-4 w-1 h-1 bg-accent/60 rounded-full"
+            className="absolute top-4 left-4 w-1 h-1 bg-blue-400/60 rounded-full"
             animate={{
               scale: [0, 1, 1, 0],
               opacity: [0, 1, 1, 0],
@@ -163,13 +163,13 @@ export function HeroSection() {
             delay: 3,
           }}
         >
-          <MousePointer2 className="w-6 h-6 text-purple-500 drop-shadow-lg" />
-          <div className="absolute -top-8 -left-2 bg-purple-500/90 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">
+          <MousePointer2 className="w-6 h-6 text-green-400 drop-shadow-lg" />
+          <div className="absolute -top-8 -left-2 bg-gradient-to-r from-green-500 to-blue-500 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">
             Maya
           </div>
           {/* Drag trail effect */}
           <motion.div
-            className="absolute top-3 left-3 w-3 h-3 border border-purple-500/80 rounded-full"
+            className="absolute top-3 left-3 w-3 h-3 border border-green-400/80 rounded-full"
             animate={{
               scale: [0, 1.8, 0],
               opacity: [0, 1, 0],
@@ -183,7 +183,7 @@ export function HeroSection() {
           />
           {/* Drag indicator dots */}
           <motion.div
-            className="absolute top-2 left-2 w-8 h-4 border border-purple-500/60 rounded bg-purple-500/20"
+            className="absolute top-2 left-2 w-8 h-4 border border-green-400/60 rounded bg-green-400/20"
             animate={{
               opacity: [0, 0.8, 0.8, 0],
               scaleX: [0, 1, 1, 0],
@@ -197,7 +197,7 @@ export function HeroSection() {
           />
           {/* Drag indicator dots */}
           <motion.div
-            className="absolute top-4 left-4 w-1 h-1 bg-purple-500 rounded-full"
+            className="absolute top-4 left-4 w-1 h-1 bg-green-400 rounded-full"
             animate={{
               scale: [0, 1, 1, 0],
               opacity: [0, 1, 1, 0],
@@ -228,10 +228,10 @@ export function HeroSection() {
             delay: 5,
           }}
         >
-          <MousePointer2 className="w-5 h-5 text-white/80 drop-shadow-lg" />
-          <div className="absolute -top-7 -left-2 bg-white/80 text-black text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">Dev</div>
+          <MousePointer2 className="w-5 h-5 text-pink-400 drop-shadow-lg" />
+          <div className="absolute -top-7 -left-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs px-2 py-1 rounded shadow-lg whitespace-nowrap">Dev</div>
           <motion.div
-            className="absolute top-2 left-2 w-5 h-5 border-2 border-white/60 rounded-full"
+            className="absolute top-2 left-2 w-5 h-5 border-2 border-pink-400/60 rounded-full"
             animate={{
               scale: [0, 2.5, 0],
               opacity: [0, 0.7, 0],
@@ -244,7 +244,7 @@ export function HeroSection() {
             }}
           />
           <motion.div
-            className="absolute top-1 left-1 w-2 h-2 bg-white rounded-full"
+            className="absolute top-1 left-1 w-2 h-2 bg-pink-400 rounded-full"
             animate={{
               scale: [0, 1.5, 0],
               opacity: [0, 1, 0],
@@ -257,7 +257,7 @@ export function HeroSection() {
             }}
           />
           <motion.div
-            className="absolute top-3 left-0 w-1 h-1 bg-white/80 rounded-full"
+            className="absolute top-3 left-0 w-1 h-1 bg-pink-400/80 rounded-full"
             animate={{
               scale: [0, 1, 0],
               opacity: [0, 1, 0],
@@ -270,7 +270,7 @@ export function HeroSection() {
             }}
           />
           <motion.div
-            className="absolute top-0 left-3 w-1 h-1 bg-white/60 rounded-full"
+            className="absolute top-0 left-3 w-1 h-1 bg-pink-400/60 rounded-full"
             animate={{
               scale: [0, 1, 0],
               opacity: [0, 1, 0],
