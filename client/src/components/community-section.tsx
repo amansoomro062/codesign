@@ -40,7 +40,7 @@ export function CommunitySection() {
   ]
 
   return (
-    <section id="community" className="relative py-24 bg-gradient-to-br from-slate-950 via-purple-950/25 to-slate-950">
+    <section id="community" className="relative py-16 sm:py-20 md:py-24 bg-gradient-to-br from-slate-950 via-purple-950/25 to-slate-950">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/10 to-transparent pointer-events-none" />
       
@@ -72,18 +72,18 @@ export function CommunitySection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance px-2">
             Built by the Community,
             <br />
             <span className="text-primary">For the Community</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty px-4">
             CoDesign thrives because of our amazing open-source community. Join thousands of designers and developers
             shaping the future of design tools.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-12 sm:mb-16">
           {statsData.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -93,12 +93,12 @@ export function CommunitySection() {
               viewport={{ once: true }}
             >
               <Card className="text-center bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-6">
+                <CardContent className="p-4 sm:p-6">
                   <div className={`inline-flex p-3 rounded-lg bg-primary/10 mb-4 ${stat.color}`}>
                     <stat.icon className="w-6 h-6" />
                   </div>
-                  <div className="text-2xl font-bold text-foreground mb-1">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <div className="text-xl sm:text-2xl font-bold text-foreground mb-1">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-muted-foreground">{stat.label}</div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -114,25 +114,25 @@ export function CommunitySection() {
           className="mb-16"
         >
           <Card className="bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10 backdrop-blur-md border border-purple-500/20 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-            <CardContent className="p-8 text-center">
+            <CardContent className="p-6 sm:p-8 text-center">
               <div className="inline-flex p-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-6">
                 <Heart className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
                 Ready to sponsor CoDesign?
               </h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-2xl mx-auto px-2">
                 Help us build the future of open-source design tools. Your sponsorship enables us to dedicate more time 
                 to development, pay contributors, and maintain infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 cursor-pointer">
+                <Button asChild className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 cursor-pointer w-full sm:w-auto">
                   <a href="https://github.com/sponsors/amansoomro062" target="_blank" rel="noopener noreferrer">
                     <Heart className="w-4 h-4 mr-2" />
                     Become a Sponsor
                   </a>
                 </Button>
-                <Button asChild className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 cursor-pointer">
+                <Button asChild className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 cursor-pointer w-full sm:w-auto">
                   <a href="mailto:sponsor@codesign.dev">
                     <MessageCircle className="w-4 h-4 mr-2" />
                     Custom Sponsorship
@@ -150,27 +150,27 @@ export function CommunitySection() {
           viewport={{ once: true }}
         >
           <Card className="bg-gradient-to-r from-blue-500/10 via-green-500/10 to-purple-500/10 backdrop-blur-md border border-blue-500/20 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-            <CardContent className="p-8 md:p-12 text-center">
+            <CardContent className="p-6 sm:p-8 md:p-12 text-center">
               <div className="inline-flex p-4 rounded-full bg-gradient-to-r from-blue-600 to-green-500 mb-6">
                 <Github className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
                 Ready to Contribute?
               </h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+              <p className="text-sm sm:text-base text-muted-foreground mb-6 max-w-2xl mx-auto px-2">
                 Whether you&apos;re a designer, developer, or just passionate about open source, there&apos;s a place for you in our
                 community. Join us in building the future of design tools.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" asChild className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 group cursor-pointer">
+            <Button size="lg" asChild className="text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-5 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 group cursor-pointer w-full sm:w-auto">
               <a href="https://github.com/amansoomro062/codesign" target="_blank" rel="noopener noreferrer">
-                <Github className="w-5 h-5 mr-2" />
+                <Github className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
                 View on GitHub
               </a>
             </Button>
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 group cursor-pointer">
-              <DiscordIcon className="w-5 h-5 mr-2" />
+            <Button size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 group cursor-pointer w-full sm:w-auto">
+              <DiscordIcon className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Join Discord
             </Button>
               </div>

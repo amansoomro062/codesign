@@ -44,7 +44,7 @@ export function FeaturesSection() {
   const IconComponent3 = features[3].icon
 
   return (
-    <section id="features" className="relative py-32 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 overflow-hidden">
+    <section id="features" className="relative py-16 sm:py-24 md:py-32 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
       
@@ -77,35 +77,35 @@ export function FeaturesSection() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground mb-6 text-balance">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-4 sm:mb-6 text-balance">
             Powerful Features for
             <br />
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Modern Design
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed px-4">
             Everything you need to design, collaborate, and ship faster than ever before.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 h-auto lg:h-[600px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 h-auto lg:h-[600px]">
           {/* Large feature card - Real-time Collaboration */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="lg:col-span-2 lg:row-span-1"
+            className="md:col-span-2 lg:col-span-2 lg:row-span-1"
           >
             <Card className="h-full bg-white/5 backdrop-blur-md hover:bg-white/10 hover:scale-[1.02] transition-all duration-500 border border-white/10">
-              <CardContent className="p-10 h-full flex flex-col justify-between">
+              <CardContent className="p-5 sm:p-6 md:p-8 lg:p-10 h-full flex flex-col justify-between">
                 <div>
                   <div className={`p-4 rounded-2xl bg-primary/10 ${features[0].color} w-fit mb-6`}>
                     <IconComponent0 className="w-8 h-8" />
                   </div>
-                  <h3 className="text-3xl font-bold text-foreground mb-4">{features[0].title}</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">{features[0].description}</p>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3 sm:mb-4">{features[0].title}</h3>
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">{features[0].description}</p>
                 </div>
               </CardContent>
             </Card>
@@ -117,12 +117,12 @@ export function FeaturesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="lg:col-span-1 lg:row-span-2"
+            className="md:col-span-2 lg:col-span-1 lg:row-span-2"
           >
             <Card
               className={`h-full bg-white/5 backdrop-blur-md hover:bg-white/10 hover:scale-[1.02] transition-all duration-500 border border-white/10 ${features[1].highlight ? "ring-2 ring-accent/50 bg-gradient-to-br from-accent/10 to-purple-500/10" : ""}`}
             >
-              <CardContent className="p-10 h-full flex flex-col justify-between">
+              <CardContent className="p-5 sm:p-6 md:p-8 lg:p-10 h-full flex flex-col justify-between">
                 <div>
                   <div className={`p-4 rounded-2xl bg-accent/20 ${features[1].color} w-fit mb-6 relative`}>
                     <IconComponent1 className="w-8 h-8" />
@@ -130,8 +130,8 @@ export function FeaturesSection() {
                       <Sparkles className="w-4 h-4 absolute -top-1 -right-1 text-accent animate-pulse" />
                     )}
                   </div>
-                  <h3 className="text-3xl font-bold text-foreground mb-4">{features[1].title}</h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">{features[1].description}</p>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3 sm:mb-4">{features[1].title}</h3>
+                  <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 sm:mb-6">{features[1].description}</p>
                   {features[1].highlight && (
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium">
                       <Sparkles className="w-4 h-4 mr-2" />
@@ -152,13 +152,13 @@ export function FeaturesSection() {
             className="lg:col-span-1"
           >
             <Card className="h-full bg-white/5 backdrop-blur-md hover:bg-white/10 hover:scale-[1.02] transition-all duration-500 border border-white/10">
-              <CardContent className="p-8 h-full flex flex-col justify-between">
+              <CardContent className="p-5 sm:p-6 md:p-8 h-full flex flex-col justify-between">
                 <div>
                   <div className={`p-3 rounded-xl bg-secondary/10 ${features[2].color} w-fit mb-4`}>
                     <IconComponent2 className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">{features[2].title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{features[2].description}</p>
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">{features[2].title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{features[2].description}</p>
                 </div>
               </CardContent>
             </Card>
@@ -173,13 +173,13 @@ export function FeaturesSection() {
             className="lg:col-span-1"
           >
             <Card className="h-full bg-white/5 backdrop-blur-md hover:bg-white/10 hover:scale-[1.02] transition-all duration-500 border border-white/10">
-              <CardContent className="p-8 h-full flex flex-col justify-between">
+              <CardContent className="p-5 sm:p-6 md:p-8 h-full flex flex-col justify-between">
                 <div>
                   <div className={`p-3 rounded-xl bg-primary/10 ${features[3].color} w-fit mb-4`}>
                     <IconComponent3 className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">{features[3].title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{features[3].description}</p>
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2 sm:mb-3">{features[3].title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{features[3].description}</p>
                 </div>
               </CardContent>
             </Card>
