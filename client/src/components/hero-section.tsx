@@ -343,11 +343,14 @@ export function HeroSection() {
 
             <Button
               size="lg"
+              asChild
               className="text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 group font-semibold cursor-pointer w-full sm:w-auto"
             >
-              <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
-              Watch Demo
-              <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform" />
+              <a href="/dashboard">
+                <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
+                Try CoDesign
+                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </motion.div>
 
