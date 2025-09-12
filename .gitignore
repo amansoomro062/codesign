@@ -71,3 +71,7 @@ uploads/
 
 # Reference files
 .reference-files/
+reference-files/
+
+# Claude development guide
+CLAUDE.md

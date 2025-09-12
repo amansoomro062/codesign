@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 
 export function AIDemoSection() {
   return (
-    <section id="ai-demo" className="relative py-24 bg-gradient-to-br from-slate-900 via-green-900/15 to-slate-900">
+    <section id="ai-demo" className="relative py-16 sm:py-20 md:py-24 bg-gradient-to-br from-slate-900 via-green-900/15 to-slate-900">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
       
@@ -39,16 +39,16 @@ export function AIDemoSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance px-2">
             AI-Powered Design Intelligence
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto text-pretty px-4">
             Watch how our AI assistant transforms your design workflow with intelligent suggestions and automated code
             generation.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -61,9 +61,9 @@ export function AIDemoSection() {
                 <div className="p-2 rounded-lg bg-primary/10 text-primary">
                   <Sparkles className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">Smart Design Suggestions</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground">Smart Design Suggestions</h3>
               </div>
-              <p className="text-muted-foreground pl-10">
+              <p className="text-sm sm:text-base text-muted-foreground pl-10">
                 Get contextual design recommendations based on your project&apos;s style and best practices.
               </p>
             </div>
@@ -73,9 +73,9 @@ export function AIDemoSection() {
                 <div className="p-2 rounded-lg bg-accent/10 text-accent">
                   <Code className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">Instant Code Export</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground">Instant Code Export</h3>
               </div>
-              <p className="text-muted-foreground pl-10">
+              <p className="text-sm sm:text-base text-muted-foreground pl-10">
                 Convert your designs to production-ready React, Vue, or HTML code in seconds.
               </p>
             </div>
@@ -85,15 +85,15 @@ export function AIDemoSection() {
                 <div className="p-2 rounded-lg bg-primary/10 text-primary">
                   <Palette className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">Color & Typography AI</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground">Color & Typography AI</h3>
               </div>
-              <p className="text-muted-foreground pl-10">
+              <p className="text-sm sm:text-base text-muted-foreground pl-10">
                 Generate harmonious color palettes and typography combinations that match your brand.
               </p>
             </div>
 
-            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 group cursor-pointer">
-              <Wand2 className="w-5 h-5 mr-2" />
+            <Button size="lg" className="text-sm sm:text-base px-6 sm:px-8 py-4 sm:py-5 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white border-0 group cursor-pointer">
+              <Wand2 className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Try AI Features
             </Button>
           </motion.div>
@@ -106,14 +106,14 @@ export function AIDemoSection() {
           >
             <Card className="overflow-hidden bg-white/5 backdrop-blur-md border border-white/10 hover:shadow-2xl transition-all duration-300">
               <CardContent className="p-0">
-                <div className="bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 backdrop-blur-sm p-8 relative">
+                <div className="bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 backdrop-blur-sm p-4 sm:p-6 md:p-8 relative">
                   {/* Mock AI Interface */}
-                  <div className="bg-slate-900/80 backdrop-blur-md rounded-lg p-6 shadow-2xl border border-white/10">
+                  <div className="bg-slate-900/80 backdrop-blur-md rounded-lg p-3 sm:p-4 md:p-6 shadow-2xl border border-white/10">
                     <div className="flex items-center space-x-2 mb-4">
                       <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                       <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                       <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                      <span className="text-sm text-muted-foreground ml-4">CoDesign AI Assistant</span>
+                      <span className="text-xs sm:text-sm text-muted-foreground ml-2 sm:ml-4">CoDesign AI Assistant</span>
                     </div>
 
                     <div className="space-y-4">
@@ -122,8 +122,8 @@ export function AIDemoSection() {
                           <Sparkles className="w-4 h-4 text-primary-foreground" />
                         </div>
                         <div className="flex-1">
-                          <div className="bg-muted rounded-lg p-3">
-                            <p className="text-sm text-foreground">
+                          <div className="bg-muted rounded-lg p-2 sm:p-3">
+                            <p className="text-xs sm:text-sm text-foreground">
                               I&apos;ve analyzed your design and suggest using a more consistent spacing pattern. Would you
                               like me to apply a 8px grid system?
                             </p>
@@ -136,8 +136,8 @@ export function AIDemoSection() {
                           <Code className="w-4 h-4 text-accent-foreground" />
                         </div>
                         <div className="flex-1">
-                          <div className="bg-muted rounded-lg p-3">
-                            <p className="text-sm text-foreground">
+                          <div className="bg-muted rounded-lg p-2 sm:p-3">
+                            <p className="text-xs sm:text-sm text-foreground">
                               Your button component is ready! I&apos;ve generated React code with proper accessibility
                               attributes and responsive design.
                             </p>

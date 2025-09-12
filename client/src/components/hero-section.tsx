@@ -44,7 +44,7 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="absolute inset-0 pointer-events-none w-full h-full">
+      <div className="absolute inset-0 pointer-events-none w-full h-full hidden lg:block">
         {/* Sarah - Cursor movement without rectangle drawing */}
         <motion.div
           className="absolute"
@@ -307,7 +307,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
-              className="text-5xl sm:text-7xl lg:text-8xl font-black text-white leading-[0.9] text-balance tracking-tight"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white leading-[0.9] text-balance tracking-tight"
             >
               Design the
               <br />
@@ -320,7 +320,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.7 }}
-              className="text-xl sm:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed text-pretty font-light"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed text-pretty font-light px-4"
             >
               The world&apos;s first open-source AI-powered design platform. Real-time collaboration meets intelligent
               assistance in a tool built by the community, for the community.
@@ -331,23 +331,23 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.9 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
           >
-            <Button size="lg" asChild className="text-lg px-10 py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white group font-semibold border-0 cursor-pointer">
+            <Button size="lg" asChild className="text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white group font-semibold border-0 cursor-pointer w-full sm:w-auto">
               <a href="https://github.com/amansoomro062/codesign" target="_blank" rel="noopener noreferrer">
-                <Github className="w-5 h-5 mr-3" />
+                <Github className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
                 Star on GitHub
-                <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
 
             <Button
               size="lg"
-              className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 group font-semibold cursor-pointer"
+              className="text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-4 sm:py-5 md:py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 group font-semibold cursor-pointer w-full sm:w-auto"
             >
-              <Play className="w-5 h-5 mr-3" />
+              <Play className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
               Watch Demo
-              <ArrowRight className="w-4 h-4 ml-3 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2 sm:ml-3 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
 
@@ -355,7 +355,7 @@ export function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 1.2 }}
-            className="flex items-center justify-center space-x-12 text-sm text-white/70 pt-12"
+            className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12 text-xs sm:text-sm text-white/70 pt-8 sm:pt-12"
           >
             <div className="flex items-center space-x-3">
               <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />

@@ -27,7 +27,7 @@ const visionPoints = [
 
 export function VisionSection() {
   return (
-    <section id="vision" className="relative py-24 bg-gradient-to-br from-slate-950 via-indigo-950/30 to-slate-950">
+    <section id="vision" className="relative py-16 sm:py-20 md:py-24 bg-gradient-to-br from-slate-950 via-indigo-950/30 to-slate-950">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-900/10 to-transparent pointer-events-none" />
       
@@ -59,16 +59,16 @@ export function VisionSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance px-2">
             Why Open Source Design Matters
           </h2>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed text-pretty">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed text-pretty px-4">
             We believe that the future of design tools lies in open collaboration, transparency, and community-driven
             innovation. Here&apos;s why we&apos;re committed to the open source way.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {visionPoints.map((point, index) => (
             <motion.div
               key={point.title}
@@ -78,12 +78,12 @@ export function VisionSection() {
               viewport={{ once: true }}
             >
               <Card className="h-full text-center bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:shadow-2xl transition-all duration-300">
-                <CardContent className="p-8">
+                <CardContent className="p-6 sm:p-8">
                   <div className="inline-flex p-4 rounded-full bg-primary/10 text-primary mb-6">
                     <point.icon className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">{point.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{point.description}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4">{point.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{point.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -95,12 +95,12 @@ export function VisionSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 backdrop-blur-md border border-white/10 rounded-2xl p-8 md:p-12 text-center hover:shadow-2xl transition-all duration-300"
+          className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 sm:p-8 md:p-12 text-center hover:shadow-2xl transition-all duration-300"
         >
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 text-balance">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 text-balance">
             &ldquo;Design tools should empower creators, not limit them.&rdquo;
           </h3>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl mx-auto text-pretty px-4">
             By keeping CoDesign open source, we ensure that the tools designers and developers rely on remain in the
             hands of the community that uses them. Together, we&apos;re building something bigger than any single company
             could create alone.
